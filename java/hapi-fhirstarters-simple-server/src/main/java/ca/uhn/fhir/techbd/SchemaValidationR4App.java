@@ -49,7 +49,7 @@ public class SchemaValidationR4App {
     
         // Read JSON input from a file
         try {
-            input = new String(Files.readAllBytes(Paths.get("/home/shreeja/workspaces/github.com/Shreeja-dev/fhirstarters/java/hapi-fhirstarters-simple-server/src/main/resources/ca/uhn/fhir/AHCHRSNQuestionnaireResponseExample.json")));
+            input = new String(Files.readAllBytes(Paths.get("/home/shreeja/workspaces/github.com/Shreeja-dev/fhirstarters/java/hapi-fhirstarters-simple-server/src/main/resources/ca/uhn/fhir/TestCase301.json")));
         } catch (IOException e) {
             System.err.println("Failed to read JSON input from file: " + e.getMessage());
             return; // Exit the method if the file read fails

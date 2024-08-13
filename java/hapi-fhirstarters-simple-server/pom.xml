@@ -1,22 +1,30 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>furore.github.io</groupId>
-	<artifactId>hapi-fhirstarters-simple-server</artifactId>
+	<groupId>techbd.github.io</groupId>
+	<artifactId>fhir-server-prime</artifactId>
 	<version>5.0.0</version>
 	<packaging>war</packaging>
 
-	<name>HAPI FHIR Server Example</name>
+	<name>HAPI FHIR Plain Server</name>
 
    <properties>
-      <hapifhir_version>5.0.0</hapifhir_version>
+      <hapifhir_version>6.2.0</hapifhir_version>
+	     <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
    </properties>
 <repositories>
     <repository>
         <id>central</id>
         <url>https://repo.maven.apache.org/maven2</url>
     </repository>
+	 <repository>
+        <id>jetty-releases</id>
+        <url>https://repo.eclipse.org/repository/jetty/</url>
+    </repository>
 </repositories>
+   
+
    <dependencies>
 
 		<!-- This dependency includes the core HAPI-FHIR classes -->
@@ -46,10 +54,11 @@
 			<artifactId>hapi-fhir-validation-resources-r4</artifactId>
 			<version>${hapifhir_version}</version>
 		</dependency>
+		
 		<dependency>
     <groupId>com.helger</groupId>
     <artifactId>ph-schematron-validator</artifactId>
-    <version>${hapifhir_version}</version>
+    <version>5.0.0</version>
 </dependency>
 		<dependency>
 			<groupId>com.phloc</groupId>
